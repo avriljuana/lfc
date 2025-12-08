@@ -16,7 +16,7 @@
         <div class="steam s3"></div>
         <div class="liquid"></div>
       </div>
-      <p class="loader-text text-uppercase">Brewing...</p>
+      <div class="saucer"></div>
     </div>
   </div>
 
@@ -79,11 +79,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
       const preloader = document.querySelector('.preloader');
-      if (preloader) {
+      if (!preloader) return;
+      setTimeout(() => {
+        document.body.classList.add('loaded');
         preloader.addEventListener('transitionend', () => preloader.remove());
-      }
+      }, 2400); // allow a longer look at the coffee animation
     });
   </script>
 </body>
