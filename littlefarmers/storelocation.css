@@ -1,0 +1,157 @@
+:root {
+  --primary: #6b3e2e;
+  --accent: #e3a23c;
+  --bg-dark: #0f0b09;
+  --panel-dark: rgba(255, 255, 255, 0.06);
+  --panel-light: rgba(255, 255, 255, 0.1);
+  --text-main: #f7f4ef;
+  --text-muted: #d4cbbf;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--text-main);
+  background: var(--bg-dark);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 50% 0;
+  background: linear-gradient(180deg, rgba(10, 7, 5, 0.65), rgba(10, 7, 5, 0.9)),
+    url("images/storelocationbg.jpg") center / cover no-repeat;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+
+  background: linear-gradient(90deg, #6f4e37, #cfaa80, #6f4e37);
+  background-size: 200% 100%;
+  color: #a37d62;
+  -webkit-mask-image: linear-gradient(#fff 0 100%);
+  -webkit-mask-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: coffeeAnimation 3s ease-in infinite alternate;
+}
+
+@keyframes coffeeAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#map {
+  opacity: 0.8;
+}
+
+.accordion-item {
+  background: transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.accordion-button {
+  background: var(--panel-dark);
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 14px 14px 0 0;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, var(--primary), #4b2a1a);
+  color: var(--text-main);
+}
+
+.accordion-button:hover {
+  background: var(--primary);
+  color: var(--text-main);
+}
+
+.accordion-body {
+  background: var(--panel-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 0 14px 14px;
+  padding: 1.25rem 1.5rem;
+  color: var(--text-main);
+}
+
+.store-name {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-top: 0.5rem;
+}
+
+.store-location {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.accordion-body .store-name,
+.accordion-body .store-location {
+    opacity: 0;
+    transform: translateX(-30px); 
+    transition: all 0.5s ease-in;
+}
+
+.accordion-collapse.show .accordion-body .store-name,
+.accordion-collapse.show .accordion-body .store-location {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.accordion-body .store-name:nth-child(odd),
+.accordion-body .store-location:nth-child(even) {
+    transition-delay: 0.1s;
+}
+
+.accordion-body .store-name:nth-child(3),
+.accordion-body .store-location:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+.accordion-body .store-name:nth-child(5),
+.accordion-body .store-location:nth-child(6) {
+    transition-delay: 0.3s;
+}
+
+.site-footer {
+  background: #0a0705;
+  padding: clamp(0.65rem, 1.6vw, 1.2rem) 0;
+  text-align: center;
+}
+.site-footer .container-xl {
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
+}
+.footer-text {
+  color: #f1e8dc;
+  letter-spacing: 0.04em;
+  font-size: clamp(0.95rem, 0.8vw + 0.8rem, 1.05rem);
+}
