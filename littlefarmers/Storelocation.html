@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="storelocation.css" />
-    <link rel="stylesheet" href="navbar.css" />
     <style>
         #map {
             height: 500px;
@@ -23,7 +22,7 @@
     </style>
 </head>
 
-<body>
+<body class="page page-store" id="top">
      <nav class="navbar navbar-expand-lg site-nav">
     <div class="container-xl">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -36,16 +35,16 @@
       <div class="collapse navbar-collapse justify-content-lg-end" id="primaryNav">
         <ul class="navbar-nav align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="heritage.html">Our Heritage</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#coffee">Our Coffee</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#faqs">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="coffee.html">Our Coffee</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#stories">Stories &amp; News</a></li>
+          <li class="nav-item"><a class="nav-link" href="stories.html">Stories &amp; News</a></li>
           <li class="nav-item"><a class="nav-link active" href="#top">Store Locations</a></li>
         </ul>
       </div>
     </div>
   </nav>
-    <div class="container">
+    <div class="container-xl store-shell">
         <h1>Our Brim Store Locations</h1>
 
         <!-- Map -->
