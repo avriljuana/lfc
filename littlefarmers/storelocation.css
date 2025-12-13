@@ -200,30 +200,30 @@ h1 {
 
 .accordion-body .store-name,
 .accordion-body .store-location {
-    opacity: 0;
-    transform: translateX(-30px); 
-    transition: all 0.5s ease-in;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.5s ease-in;
 }
 
 .accordion-collapse.show .accordion-body .store-name,
 .accordion-collapse.show .accordion-body .store-location {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .accordion-body .store-name:nth-child(odd),
 .accordion-body .store-location:nth-child(even) {
-    transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .accordion-body .store-name:nth-child(3),
 .accordion-body .store-location:nth-child(4) {
-    transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .accordion-body .store-name:nth-child(5),
 .accordion-body .store-location:nth-child(6) {
-    transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .site-footer {
@@ -240,4 +240,51 @@ h1 {
   color: #f1e8dc;
   letter-spacing: 0.04em;
   font-size: clamp(0.95rem, 0.8vw + 0.8rem, 1.05rem);
+}
+
+.accordion-button::after {
+  background-image: none;
+}
+
+.accordion-button {
+  position: relative;
+  padding-right: 3rem;
+}
+
+/* PLUS ICON */
+.accordion-button::before {
+  content: "+";
+  position: absolute;
+  right: 1.25rem;
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e3a23c;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.accordion-button:not(.collapsed)::before {
+  content: "☕–";
+}
+
+.accordion-button::before {
+  content: "☕+";
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "-";
+  transform: rotate(180deg);
+}
+
+.accordion-button:not(.collapsed)::before {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+.accordion-button::after {
+  content: none !important;
+  display: none !important;
 }

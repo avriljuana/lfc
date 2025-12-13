@@ -1,0 +1,155 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #f7f4ef;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/Contactbg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.contact-card {
+  background: rgba(180, 169, 169, 0.6);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(173, 4, 4, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #f7f4ef;
+}
+
+.site-nav {
+  background: rgba(10, 7, 5, 0.9);
+}
+
+.contact-header {
+  color: #e3a23c;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.contact-card a {
+  color: #e3a23c;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Icon brand colors */
+.icon-email {
+  color: #d44638;
+}
+
+.icon-phone {
+  color: #34a853;
+}
+
+.icon-facebook {
+  color: #1877f2;
+}
+
+.icon-instagram {
+  color: #e1306c;
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Navbar */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(10, 7, 5, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.4rem 0;
+}
+.site-nav .navbar-brand {
+  padding: 0;
+}
+.nav-logo {
+  width: clamp(48px, 10vw, 64px);
+  height: clamp(48px, 10vw, 64px);
+  object-fit: contain;
+}
+.nav-brand-text {
+  letter-spacing: 0.08em;
+  color: #f7f4ef;
+  font-size: clamp(0.92rem, 0.6vw + 0.8rem, 1.05rem);
+  font-family: "Cinzel", "Poppins", serif;
+  text-transform: none;
+}
+.site-nav .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.site-nav .navbar-toggler-icon {
+  filter: invert(1);
+}
+.site-nav .nav-link {
+  color: #f7f4ef;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 600;
+  padding: 0.55rem 0.4rem;
+  font-size: clamp(0.9rem, 0.6vw + 0.75rem, 1rem);
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus-visible,
+.site-nav .nav-link.active {
+  color: #e3a23c;
+}
+.site-nav .navbar-nav {
+  gap: 0.35rem;
+}
+@media (max-width: 991.98px) {
+  .site-nav .navbar-collapse {
+    padding: 0.55rem 0;
+  }
+  .site-nav .navbar-nav {
+    gap: 0.35rem;
+  }
+  .site-nav .nav-link {
+    padding: 0.45rem 0;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 576px) {
+  .nav-logo {
+    width: clamp(44px, 18vw, 60px);
+    height: clamp(44px, 18vw, 60px);
+  }
+  .nav-brand-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+  .site-nav .nav-link {
+    font-size: 0.92rem;
+  }
+}
+/* Footer */
+.site-footer {
+  background: #0a0705;
+  padding: clamp(0.65rem, 1.6vw, 1.2rem) 0;
+  text-align: center;
+  width: 100%;
+}
+.site-footer .container-xl {
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
+}
+.footer-text {
+  color: #f1e8dc;
+  letter-spacing: 0.04em;
+  font-size: clamp(0.95rem, 0.8vw + 0.8rem, 1.05rem);
+}
