@@ -96,70 +96,84 @@ body {
   .site-nav .nav-link {
     font-size: 0.92rem;
   }
+  #map {
+    height: 300px;
+  }
+  .accordion-body {
+    padding: 1rem 1.1rem;
+  }
 }
 
-body::before {
+/* Hero Section */
+.page-hero {
+  position: relative;
+  padding: clamp(5rem, 8vw, 7.5rem) 0 clamp(4rem, 6vw, 6rem);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+.page-hero::before {
   content: "";
-  position: fixed;
-  inset: 0 0 50% 0;
-  background: linear-gradient(180deg, rgba(10, 7, 5, 0.65), rgba(10, 7, 5, 0.9)),
-    url("images/storelocationbg.jpg") center / cover no-repeat;
-  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 7, 5, 0.68), rgba(10, 7, 5, 0.88));
+  z-index: 0;
 }
-
-h1 {
-  font-size: clamp(2.2rem, 1vw + 2.6rem, 3rem);
+.page-hero .container-xl {
+  position: relative;
+  z-index: 1;
+}
+.store-hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.65)), url("images/herobg.jpg") center/cover no-repeat;
+}
+.eyebrow {
+  letter-spacing: 0.18em;
   font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-
-  background: linear-gradient(90deg, #6f4e37, #cfaa80, #6f4e37);
-  background-size: 200% 100%;
-  color: #a37d62;
-  -webkit-mask-image: linear-gradient(#fff 0 100%);
-  mask-image: linear-gradient(#fff 0 100%);
-  -webkit-mask-clip: text;
-  mask-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: coffeeAnimation 3s ease-in infinite alternate;
+  color: var(--accent);
+  font-size: clamp(1.05rem, 0.9vw + 0.4rem, 1.25rem);
+}
+.store-hero h1 {
+  font-family: "Cinzel", "Poppins", serif;
+  letter-spacing: 0.04em;
+}
+.store-hero .lead {
+  color: var(--text-muted);
 }
 
-@keyframes coffeeAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Store Section */
+.store-section {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  background: var(--bg-dark);
 }
 
 #map {
-  opacity: 0.8;
-  border-radius: 10px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  height: clamp(300px, 50vw, 500px);
+  width: 100%;
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .accordion-item {
   background: transparent;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.32);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
 }
 
 .accordion-button {
   background: var(--panel-dark);
   color: var(--text-main);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 0.6vw + 0.85rem, 1.05rem);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 14px 14px 0 0;
   transition: background 0.25s ease, color 0.25s ease;
+  padding: clamp(0.85rem, 2vw, 1rem) clamp(1rem, 3vw, 1.25rem);
 }
 
 .accordion-button::after {
@@ -177,25 +191,26 @@ h1 {
 }
 
 .accordion-body {
-  background: var(--panel-light);
+  background: rgba(255, 255, 255, 0.04);
   border-left: 4px solid var(--accent);
   border-radius: 0 0 14px 14px;
-  padding: 1.25rem 1.5rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
   color: var(--text-main);
 }
 
 .store-name {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 0.5vw + 0.85rem, 1rem);
   letter-spacing: 0.05em;
   color: var(--accent);
   margin-top: 0.5rem;
 }
 
 .store-location {
-  font-size: 0.92rem;
+  font-size: clamp(0.88rem, 0.4vw + 0.8rem, 0.92rem);
   color: var(--text-muted);
   margin-bottom: 0.75rem;
+  line-height: 1.6;
 }
 
 .accordion-body .store-name,
