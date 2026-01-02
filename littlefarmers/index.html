@@ -16,30 +16,6 @@
 </head>
 
 <body>
-  <!-- <div class="preloader" aria-hidden="true">
-    <div class="bean-loader">
-      <div class="orbit">
-        <div class="bean"></div>
-        <div class="bean"></div>
-        <div class="bean"></div>
-        <div class="bean"></div>
-        <div class="bean"></div>
-      </div>
-    </div>       
-  </div> -->
-  <div class="preloader" aria-hidden="true">
-    <div class="traditional-coffee">
-      <div class="steam s1"></div>
-      <div class="steam s2"></div>
-      <div class="steam s3"></div>
-
-      <div class="cup"></div>
-      <div class="saucer"></div>
-
-      <p class="brew-text">Little Farmers Coffee…</p>
-    </div>
-  </div>
-
   <header id="hero" class="hero">
     <div class="hero-content">
       <div class="hero-heading text-center">
@@ -111,15 +87,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    window.addEventListener('load', () => {
-      const preloader = document.querySelector('.preloader');
-      if (!preloader) return;
-      setTimeout(() => {
-        document.body.classList.add('loaded');
-        preloader.addEventListener('transitionend', () => preloader.remove());
-      }, 2400);
-    });
-
     // reveal About images on scroll
     const gallery = document.querySelector('.about-gallery');
     const observer = new IntersectionObserver(
@@ -134,20 +101,6 @@
       { threshold: 0.25 }
     );
     if (gallery) observer.observe(gallery);
-    window.addEventListener('load', () => {
-      const preloader = document.querySelector('.preloader');
-      if (!preloader) return;
-
-      setTimeout(() => {
-        document.body.classList.add('loaded');
-        preloader.addEventListener(
-          'transitionend',
-          () => preloader.remove(),
-          { once: true }
-        );
-      }, 3000);
-    });
   </script>
 </body>
-
 </html>
