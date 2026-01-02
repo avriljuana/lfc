@@ -136,12 +136,25 @@ body {
 }
 .coffee-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .coffee-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .coffee-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 @media (min-width: 992px) {
   .coffee-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1000px;
   }
 }
 .coffee-card {
@@ -168,9 +181,9 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  max-height: clamp(180px, 22vw, 240px);
+  max-height: clamp(140px, 18vw, 180px);
   object-fit: contain;
-  padding: 0.75rem;
+  padding: clamp(0.6rem, 1.5vw, 0.75rem);
   background: rgba(255, 255, 255, 0.02);
 }
 .coffee-body {
