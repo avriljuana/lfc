@@ -123,6 +123,7 @@ body {
   font-size: clamp(1.05rem, 0.9vw + 0.4rem, 1.25rem);
 }
 .heritage-hero h1 {
+  font-family: "Cinzel", "Poppins", serif;
   letter-spacing: 0.04em;
 }
 .heritage-hero .lead {
