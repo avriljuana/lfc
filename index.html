@@ -27,9 +27,17 @@
   <!-- Coffee Loading Preloader -->
   <div class="preloader" id="preloader">
     <div class="coffee-loader">
-      <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif" alt="Loading coffee..." class="coffee-gif" 
-           loading="eager"
-           onerror="this.onerror=null; this.src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif';">
+      <div class="coffee-cup">
+        <div class="coffee-cup-body">
+          <div class="coffee-liquid"></div>
+        </div>
+        <div class="coffee-handle"></div>
+        <div class="coffee-steam">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -114,19 +122,30 @@
       }
     })();
 
-    // Hide preloader when page is fully loaded
+    // Hide preloader after 1.5s or when page is fully loaded
+    let preloaderHidden = false;
+    
+    function hidePreloader() {
+      if (preloaderHidden) return;
+      preloaderHidden = true;
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          preloader.style.pointerEvents = 'none';
+        }, 500);
+      }
+      document.body.classList.add('loaded');
+    }
+    
+    // Hide after 1.5s minimum
+    setTimeout(hidePreloader, 1500);
+    
+    // Also hide when page is fully loaded
     window.addEventListener('load', function() {
-      setTimeout(function() {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-          preloader.style.opacity = '0';
-          preloader.style.visibility = 'hidden';
-          setTimeout(() => {
-            preloader.style.display = 'none';
-          }, 500);
-        }
-        document.body.classList.add('loaded');
-      }, 800); // Delay to ensure GIF is visible
+      setTimeout(hidePreloader, 1500);
     });
 
     // reveal About images on scroll
