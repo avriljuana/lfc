@@ -128,21 +128,21 @@ body {
 .coffee-loader {
   display: grid;
   place-items: center;
-  width: 200px;
-  height: 200px;
+  width: clamp(120px, 15vw, 200px);
+  height: clamp(120px, 15vw, 200px);
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .coffee-gif {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
   background: transparent;
   image-rendering: auto;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 /* Ensure image is visible */
@@ -151,26 +151,46 @@ body {
   visibility: visible;
 }
 
-/* Responsive coffee loader */
+/* Responsive coffee loader for all screen sizes */
+@media (max-width: 1200px) {
+  .coffee-loader {
+    width: clamp(140px, 12vw, 180px);
+    height: clamp(140px, 12vw, 180px);
+  }
+}
+
+@media (max-width: 992px) {
+  .coffee-loader {
+    width: clamp(130px, 14vw, 160px);
+    height: clamp(130px, 14vw, 160px);
+  }
+}
+
 @media (max-width: 768px) {
   .coffee-loader {
-    width: 150px;
-    height: 150px;
+    width: clamp(120px, 18vw, 150px);
+    height: clamp(120px, 18vw, 150px);
   }
-  .coffee-gif {
-    width: 150px;
-    height: 150px;
+}
+
+@media (max-width: 576px) {
+  .coffee-loader {
+    width: clamp(100px, 22vw, 130px);
+    height: clamp(100px, 22vw, 130px);
   }
 }
 
 @media (max-width: 480px) {
   .coffee-loader {
-    width: 120px;
-    height: 120px;
+    width: clamp(90px, 25vw, 120px);
+    height: clamp(90px, 25vw, 120px);
   }
-  .coffee-gif {
-    width: 120px;
-    height: 120px;
+}
+
+@media (max-width: 360px) {
+  .coffee-loader {
+    width: clamp(80px, 28vw, 100px);
+    height: clamp(80px, 28vw, 100px);
   }
 }
 
