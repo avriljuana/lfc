@@ -122,6 +122,18 @@ body {
   visibility: hidden;
 }
 
+.coffee-loader {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+}
+
+.coffee-loader img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
 
 .hero {
   position: relative;
