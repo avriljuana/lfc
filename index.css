@@ -151,6 +151,29 @@ body {
   visibility: visible;
 }
 
+/* Responsive coffee loader */
+@media (max-width: 768px) {
+  .coffee-loader {
+    width: 150px;
+    height: 150px;
+  }
+  .coffee-gif {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-loader {
+    width: 120px;
+    height: 120px;
+  }
+  .coffee-gif {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -320,6 +343,11 @@ body {
   color: #ffffff;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
+
+.scroll-down .btn svg {
+  width: 22px;
+  height: 22px;
+}
 .about {
   position: relative;
   min-height: 100vh;
@@ -363,6 +391,11 @@ body {
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-link svg {
+  width: 18px;
+  height: 18px;
 }
 .back-link:hover,
 .back-link:focus-visible {
@@ -471,6 +504,38 @@ body {
   .nav-item:focus-visible::before {
     width: 50px;
   }
+  
+  /* Responsive text sizes for tablet */
+  .hero-caption {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  .hero-subtext {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+  .about-label {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+  }
+  .about-subtext {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+  
+  /* Responsive icon sizes for tablet */
+  .scroll-down .btn {
+    width: 48px;
+    height: 48px;
+  }
+  .scroll-down .btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .back-link {
+    width: 48px;
+    height: 48px;
+  }
+  .back-link svg {
+    width: 17px;
+    height: 17px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -488,7 +553,42 @@ body {
   .nav-item:focus-visible::before {
     width: 46px;
   }
+  
+  /* Responsive text sizes for mobile */
+  .hero-caption {
+    font-size: clamp(0.95rem, 4vw, 1.3rem);
+    letter-spacing: 0.1em;
+  }
+  .hero-subtext {
+    font-size: clamp(0.8rem, 3vw, 0.95rem);
+  }
+  .about-label {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+  .about-subtext {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    padding: 0 1rem;
+  }
+  
+  /* Responsive icon sizes */
+  .scroll-down .btn {
+    width: 44px;
+    height: 44px;
+  }
+  .scroll-down .btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .back-link {
+    width: 44px;
+    height: 44px;
+  }
+  .back-link svg {
+    width: 16px;
+    height: 16px;
+  }
 }
+
 
 /* Global pages */
 .page {
