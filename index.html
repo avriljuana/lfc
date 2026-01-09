@@ -13,13 +13,21 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link href="index.css" rel="stylesheet">
+  <style>
+    /* Ensure preloader is visible on page load */
+    body:not(.loaded) .preloader {
+      display: grid !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Coffee Loading Preloader -->
   <div class="preloader" id="preloader">
     <div class="coffee-loader">
-      <img src="https://media.tenor.com/5o4vJqB8h3EAAAAi/coffee-loading.gif" alt="Loading coffee..." class="coffee-gif">
+      <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif" alt="Loading coffee..." class="coffee-gif">
     </div>
   </div>
 
