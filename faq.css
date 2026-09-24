@@ -132,11 +132,22 @@ body {
 }
 
 /* FAQ list */
-.faq-list {
-  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+.faq-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2.25rem) clamp(2.8rem, 5vw, 4rem);
 }
-.faq-list .container-xl {
-  max-width: 1080px;
+.faq-column,
+.chart-column {
+  min-width: 0;
+}
+.faq-column .container-xl,
+.chart-column .container-xl {
+  padding-left: 0;
+  padding-right: 0;
 }
 .faq-heading {
   display: flex;
@@ -326,9 +337,6 @@ body {
 }
 
 /* Chart */
-.faq-chart {
-  padding: 0 0 clamp(2.8rem, 5vw, 4rem);
-}
 .chart-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -337,8 +345,9 @@ body {
   padding: clamp(1.25rem, 3vw, 1.75rem);
   display: grid;
   gap: 1.25rem;
-  margin: 0 auto;
-  max-width: 980px;
+  margin: 0;
+  position: sticky;
+  top: 6.5rem;
 }
 .chart-heading {
   max-width: 620px;
@@ -386,6 +395,11 @@ body {
 }
 
 @media (max-width: 576px) {
+  .faq-layout {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .faq-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -417,5 +431,14 @@ body {
   }
   .chart-card {
     padding: 1rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991.98px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+  }
+  .chart-card {
+    position: static;
   }
 }
