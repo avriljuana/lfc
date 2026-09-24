@@ -5,7 +5,7 @@
   --text-main: #f7f4ef;
   --text-muted: #e8dfd2;
   --surface: rgba(107, 62, 46, 0.22);
-  --surface-strong: #211711;
+  --surface-strong: #1b120e;
   --line: rgba(227, 162, 60, 0.2);
 }
 
@@ -194,7 +194,7 @@ body {
 
 .accordion-button {
   background: transparent;
-  color: var(--text-main);
+  color: var(--text-main) !important;
   font-weight: 700;
   padding: 1.15rem 4.25rem 1.15rem 4.5rem;
   position: relative;
@@ -203,7 +203,7 @@ body {
 }
 
 .accordion-button:hover {
-  background: rgba(107, 62, 46, 0.52);
+  background: rgba(107, 62, 46, 0.52) !important;
 }
 .accordion-button:focus {
   box-shadow: none;
@@ -250,13 +250,14 @@ body {
 
 /* FAQ answer modal */
 .faq-modal-content {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-strong) !important;
+  background-color: var(--surface-strong) !important;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  color: var(--text-main);
+  color: var(--text-main) !important;
 }
 .faq-modal-dialog {
   width: calc(100% - 2rem);
@@ -269,6 +270,7 @@ body {
   overflow: hidden;
 }
 .faq-modal-content .modal-header {
+  background: transparent;
   border-bottom: 0;
   padding: 1rem 1.2rem 0.4rem;
 }
@@ -276,6 +278,7 @@ body {
   filter: invert(1);
 }
 .faq-modal-content .modal-body {
+  background: transparent;
   overflow-y: auto;
   padding: 0.75rem 1.75rem 1.75rem;
 }
@@ -285,13 +288,20 @@ body {
   font-size: clamp(1.55rem, 1vw + 1.35rem, 2.1rem);
   font-weight: 700;
   line-height: 1.35;
+  color: var(--text-main) !important;
 }
 .faq-modal-answer {
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
   font-size: clamp(1.08rem, 0.55vw + 0.98rem, 1.28rem);
   line-height: 1.75;
   padding: 0.15rem 0;
   text-align: center;
+}
+.faq-modal-answer a {
+  color: var(--accent) !important;
+}
+.faq-modal-answer li::marker {
+  color: var(--accent);
 }
 .faq-modal-answer ol,
 .faq-modal-answer ul {
