@@ -235,6 +235,14 @@ body {
 .coffee-modal {
   max-width: clamp(320px, 90vw, 780px);
 }
+@media (max-width: 576px) {
+  .coffee-modal {
+    width: calc(100% - 1rem);
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .coffee-modal .modal-content {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
