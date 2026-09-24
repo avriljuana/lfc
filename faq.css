@@ -287,15 +287,19 @@ body {
   line-height: 1.35;
 }
 .faq-modal-answer {
-  border-left: 3px solid var(--accent);
   color: var(--text-muted);
   font-size: clamp(1.05rem, 0.5vw + 0.95rem, 1.2rem);
   line-height: 1.7;
-  padding: 0.15rem 0 0.15rem 1.15rem;
+  padding: 0.15rem 0;
+  text-align: center;
 }
 .faq-modal-answer ol,
 .faq-modal-answer ul {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1.25rem;
+  text-align: left;
 }
 
 /* Chart */
