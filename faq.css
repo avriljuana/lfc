@@ -250,15 +250,17 @@ body {
 
 /* FAQ answer modal */
 .faq-modal-content {
-  background: var(--surface-strong);
-  border: 1px solid rgba(227, 162, 60, 0.45);
-  border-radius: 14px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: var(--text-main);
 }
 .faq-modal-dialog {
   width: calc(100% - 2rem);
-  max-width: 640px;
+  max-width: 780px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -267,35 +269,29 @@ body {
   overflow: hidden;
 }
 .faq-modal-content .modal-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.1rem 1.35rem 0.85rem;
-}
-.modal-kicker {
-  color: var(--accent);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  border-bottom: 0;
+  padding: 1rem 1.2rem 0.4rem;
 }
 .faq-modal-content .btn-close {
   filter: invert(1);
-  opacity: 0.8;
 }
 .faq-modal-content .modal-body {
   overflow-y: auto;
-  padding: 1.35rem;
+  padding: 0.5rem 1.25rem 1.25rem;
 }
 .faq-modal-content .modal-title {
   font-family: "Cinzel", "Poppins", serif;
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
-  line-height: 1.3;
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.45rem, 1vw + 1.2rem, 1.85rem);
+  font-weight: 700;
+  line-height: 1.35;
 }
 .faq-modal-answer {
   border-left: 3px solid var(--accent);
   color: var(--text-muted);
-  line-height: 1.75;
-  padding-left: 1rem;
+  font-size: clamp(1.05rem, 0.5vw + 0.95rem, 1.2rem);
+  line-height: 1.7;
+  padding: 0.15rem 0 0.15rem 1.15rem;
 }
 .faq-modal-answer ol,
 .faq-modal-answer ul {
@@ -377,6 +373,7 @@ body {
   }
   .faq-modal-dialog {
     width: calc(100% - 1rem);
+    max-width: none;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
