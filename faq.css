@@ -7,6 +7,8 @@
   --surface: rgba(107, 62, 46, 0.22);
   --surface-strong: #1b120e;
   --line: rgba(227, 162, 60, 0.2);
+  --modal-surface: rgba(255, 255, 255, 0.08);
+  --modal-border: rgba(255, 255, 255, 0.16);
 }
 
 body {
@@ -254,9 +256,9 @@ body {
 
 /* FAQ answer modal */
 .faq-modal-content {
-  background: var(--surface-strong) !important;
-  background-color: var(--surface-strong) !important;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--modal-surface) !important;
+  background-color: var(--modal-surface) !important;
+  border: 1px solid var(--modal-border);
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
