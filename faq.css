@@ -193,7 +193,7 @@ body {
 }
 
 .accordion-button {
-  background: transparent;
+  background: rgba(15, 11, 9, 0.72) !important;
   color: var(--text-main) !important;
   font-weight: 700;
   padding: 1.15rem 4.25rem 1.15rem 4.5rem;
@@ -204,6 +204,10 @@ body {
 
 .accordion-button:hover {
   background: rgba(107, 62, 46, 0.52) !important;
+}
+.accordion-button:not(.collapsed) {
+  background: rgba(15, 11, 9, 0.72) !important;
+  color: var(--text-main) !important;
 }
 .accordion-button:focus {
   box-shadow: none;
