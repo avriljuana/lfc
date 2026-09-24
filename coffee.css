@@ -4,6 +4,7 @@
   --bg-dark: #0f0b09;
   --text-main: #f7f4ef;
   --text-muted: #e8dfd2;
+  --surface-strong: #1b120e;
 }
 
 body {
@@ -244,12 +245,14 @@ body {
   }
 }
 .coffee-modal .modal-content {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-strong) !important;
+  background-color: var(--surface-strong) !important;
   border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 16px;
+  color: var(--text-main) !important;
 }
 .coffee-modal .modal-header {
   padding: 1rem 1.2rem 0.4rem;
@@ -259,6 +262,7 @@ body {
   letter-spacing: 0.08em;
   font-weight: 700;
   font-size: clamp(1.25rem, 0.8vw + 1.1rem, 1.55rem);
+  color: var(--text-main) !important;
 }
 .coffee-modal .modal-body {
   padding: 0.5rem 1.25rem 1.25rem;
